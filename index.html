@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zambia Election Poll</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <h1 class="text-center mb-4">Zambia Election Poll</h1>
+            <p class="text-center lead">Select your preferred party and city:</p>
+
+            <!-- City Selection Dropdown -->
+            <div class="mb-3">
+                <label for="city" class="form-label">Choose your city:</label>
+                <select id="city" class="form-select">
+                    <option value="">Select City</option>
+                    <option value="Lusaka">Lusaka</option>
+                    <option value="Ndola">Ndola</option>
+                    <option value="Kitwe">Kitwe</option>
+                    <option value="Livingstone">Livingstone</option>
+                    <option value="Chipata">Chipata</option>
+                    <option value="Solwezi">Solwezi</option>
+                </select>
+            </div>
+
+            <!-- Voting Buttons -->
+            <div class="poll text-center">
+                <button onclick="vote('UPND')" id="vote-UPND" class="btn btn-primary btn-lg mb-2 w-100">Vote UPND</button>
+                <button onclick="vote('PF')" id="vote-PF" class="btn btn-danger btn-lg mb-2 w-100">Vote PF</button>
+                <button onclick="vote('UKA')" id="vote-UKA" class="btn btn-success btn-lg mb-2 w-100">Vote UKA</button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results mt-4">
+                <h2 class="text-center">Poll Results</h2>
+                <div class="row">
+                    <div class="col">
+                        <p><strong>UPND:</strong> <span id="UPND-votes">0</span> votes</p>
+                        <p><strong>PF:</strong> <span id="PF-votes">0</span> votes</p>
+                        <p><strong>UKA:</strong> <span id="UKA-votes">0</span> votes</p>
+                    </div>
+                    <div class="col">
+                        <h3>Votes by City</h3>
+                        <p><strong>Lusaka:</strong> <span id="Lusaka-votes">0</span> votes</p>
+                        <p><strong>Ndola:</strong> <span id="Ndola-votes">0</span> votes</p>
+                        <p><strong>Kitwe:</strong> <span id="Kitwe-votes">0</span> votes</p>
+                        <p><strong>Livingstone:</strong> <span id="Livingstone-votes">0</span> votes</p>
+                        <p><strong>Chipata:</strong> <span id="Chipata-votes">0</span> votes</p>
+                        <p><strong>Solwezi:</strong> <span id="Solwezi-votes">0</span> votes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
